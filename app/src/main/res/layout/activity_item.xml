@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    app:cardBackgroundColor="#C6F8C8"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/type_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Type"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_below="@+id/type_textView"
+            android:id="@+id/expense_type_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Category"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/amount_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expense_type_textView"
+            android:layout_marginStart="8dp"
+            android:text="Amount"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/date_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amount_textView2"
+            android:layout_marginStart="8dp"
+            android:text="Date"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/note_textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_textView3"
+            android:layout_marginStart="8dp"
+            android:text="Note"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/delete_img"
+            android:src="@drawable/delete"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <ImageView
+            android:layout_marginTop="6dp"
+            android:id="@+id/update_img"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:layout_marginRight="0dp"
+            android:layout_toLeftOf="@+id/delete_img"
+            android:src="@drawable/icon_update" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

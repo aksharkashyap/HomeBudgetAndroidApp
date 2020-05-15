@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_color"
+    tools:context=".UpdateNote">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/amount_updatenote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Amount"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/note_updatenote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write some note" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp">
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:text="Type"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:id="@+id/amount_type_updatenote"
+                    android:layout_width="291dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/income_rb_updatenote"
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:text="Income" />
+
+                    <RadioButton
+                        android:id="@+id/expense_rb_updatenote"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="Expense" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp">
+
+                <TextView
+                    android:id="@+id/type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/category_updatenote"
+                    android:layout_width="262dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/choose_Date_updatenote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="date_picker"
+                    android:text="Choose Date" />
+
+                <TextView
+                    android:id="@+id/display_date_updatenote"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/update_note_btn_updatenote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="update_note_submit"
+                android:text="Update Note"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

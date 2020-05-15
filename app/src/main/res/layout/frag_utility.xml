@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myfragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/title_budget_estimation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUDGET ESTIMATION: "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_expenditure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_budget_estimation"
+                    android:text="Total Expenditure" />
+
+                <TextView
+                    android:id="@+id/total_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_expenditure"
+                    android:text="Total Income" />
+
+                <TextView
+                    android:id="@+id/total_saving"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_income"
+                    android:text="Total Saving" />
+
+                <TextView
+                    android:id="@+id/avg_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_saving"
+                    android:text="Average Income" />
+
+                <TextView
+                    android:id="@+id/avg_expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avg_income"
+                    android:text="Average Expenditure" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/monthly_estimation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBlue"
+                    android:text="Monthly"
+                    android:textColor="@color/colorWhite" />
+
+                <Spinner
+                    android:id="@+id/month_chooser_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="41dp"
+                    android:layout_toRightOf="@+id/monthly_estimation" />
+
+                <EditText
+                    android:id="@+id/year_monthly_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/month_chooser_spinner"
+                    android:hint="Year"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/yearly_estimation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monthly_estimation"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Yearly"
+                    android:textColor="@color/colorWhite" />
+
+                <EditText
+                    android:id="@+id/year_yearly_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/year_monthly_et"
+                    android:layout_toRightOf="@+id/yearly_estimation"
+                    android:hint="Year"
+                    android:inputType="number" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
